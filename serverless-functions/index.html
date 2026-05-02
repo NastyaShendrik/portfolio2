@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Serverless Functions case study by Nastya Shendrik — improving developer experience in an event-driven cloud service."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nastya Shendrik" />
+    <meta property="og:url" content="https://shendrik.pro/serverless-functions/" />
+    <meta property="og:title" content="Serverless Functions | Nastya Shendrik" />
+    <meta
+      property="og:description"
+      content="Serverless Functions case study by Nastya Shendrik — improving developer experience in an event-driven cloud service."
+    />
+    <meta property="og:image" content="https://shendrik.pro/img/Cover.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Serverless Functions | Nastya Shendrik" />
+    <meta
+      name="twitter:description"
+      content="Serverless Functions case study by Nastya Shendrik — improving developer experience in an event-driven cloud service."
+    />
+    <meta name="twitter:image" content="https://shendrik.pro/img/Cover.png" />
+    <title>Serverless Functions | Nastya Shendrik</title>
+    <link rel="icon" href="../img/fav.png" type="image/png" />
+    <link rel="stylesheet" href="../tokens.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="case-shell">
+      <header class="case-header">
+        <div class="bar__inner">
+          <a class="ds-link ds-link--default" href="../">Nastya Shendrik</a>
+          <a class="ds-link ds-link--default" href="https://t.me/nastyashendrik?text=Hi!">Say Hi</a>
+        </div>
+      </header>
+
+      <main class="case-main">
+        <article class="case-content">
+          <svg
+            class="case-title-image case-brand-svg"
+            width="237"
+            height="92"
+            viewBox="0 0 237 92"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="cloud.ru"
+          >
+            <path
+              d="M182.559 60.5947C185.176 60.5947 186.841 59.01 186.841 56.3206C186.841 53.6311 185.176 52.0464 182.559 52.0464C179.943 52.0464 178.278 53.6311 178.278 56.3206C178.278 59.01 179.943 60.5947 182.559 60.5947ZM205.156 34.0854H208.011V39.8483H203.729C199.923 39.8483 198.639 41.625 198.639 44.5065V60.0184H192.645V34.0373H198.354V38.8396C199.495 35.526 201.779 34.0854 205.156 34.0854ZM94.7395 47.0999C94.7395 52.6227 96.7374 55.264 101.97 55.264C107.204 55.264 109.201 52.6227 109.201 47.0999V46.9558C109.201 41.433 107.204 38.8396 101.97 38.8396C96.7374 38.8396 94.7395 41.433 94.7395 46.9558V47.0999ZM101.97 60.5947C93.7879 60.5947 88.65 55.456 88.65 47.0518C88.65 38.6476 93.7879 33.5091 101.97 33.5091C110.153 33.5091 115.291 38.6476 115.291 47.0518C115.291 55.456 110.153 60.5947 101.97 60.5947ZM78.8501 60.0184H84.8444V24.0002H78.8501V60.0184ZM172.521 24.0002V60.0184H166.813V56.1764C165.195 58.7699 162.721 60.5947 158.487 60.5947C150.4 60.5947 146.356 54.9278 146.356 47.4361C146.356 39.2239 150.4 33.557 158.487 33.557C162.008 33.557 165.385 35.2858 166.527 37.591V24.0002H172.521ZM159.582 55.264C164.719 55.264 166.718 52.6227 166.718 47.0999V46.9558C166.718 41.433 164.719 38.8877 159.582 38.8877C154.444 38.8877 152.445 41.433 152.445 46.9558V47.0999C152.445 52.6227 154.444 55.264 159.582 55.264ZM217.002 49.5011C217.002 53.3431 218.905 55.264 222.711 55.264C226.517 55.264 228.42 53.3431 228.42 49.5011V34.0854H234.414V60.0184H228.8V56.1764C227.23 58.914 224.661 60.5947 220.38 60.5947C214.291 60.5947 211.008 57.233 211.008 50.5095V34.0854H217.002V49.5011ZM125.043 49.5011C125.043 53.3431 126.946 55.264 130.752 55.264C134.558 55.264 136.461 53.3431 136.461 49.5011V34.0854H142.455V60.0184H136.842V56.1764C135.272 58.914 132.703 60.5947 128.421 60.5947C122.332 60.5947 119.049 57.233 119.049 50.5095V34.0854H125.043V49.5011ZM65.1014 33.5091C56.5383 33.5091 51.9236 38.4074 51.9236 47.0518C51.9236 55.6961 56.5383 60.5947 64.8635 60.5947C70.3344 60.5947 74.7585 57.8093 76.5189 52.1424H70.8101C69.7158 54.0636 68.146 55.264 64.8635 55.264C59.9635 55.264 58.013 52.6227 58.013 47.0999V46.9558C58.013 41.433 59.9635 38.8396 65.1014 38.8396C68.146 38.8396 69.7158 39.8961 70.8101 41.721H76.5189C74.7585 36.2464 70.5722 33.5091 65.1014 33.5091Z"
+              fill="currentColor"
+            />
+            <path
+              d="M21.0834 48.5689H39.2866V60.2642L21.08 67.9964V48.5656L21.0834 48.5689ZM39.2866 45.861V34.1657L21.0834 26.4302V45.8509L39.2866 45.861ZM0 34.1657V60.2676L18.2065 67.9997V26.4302L0 34.1657Z"
+              fill="#26D07C"
+            />
+          </svg>
+          <h1 class="text-h1">Serverless Functions</h1>
+          <p class="text-body">
+            Improving developer experience in an event-driven cloud service
+          </p>
+
+          <img
+            class="case-image"
+            src="../img/Function%20details.png"
+            alt="Function details and debugging experience"
+          />
+
+          <section class="case-section">
+            <h2 class="text-h2">Overview</h2>
+            <p class="text-body">
+              Serverless Functions is a customer-facing cloud service that allows developers to run
+              code in response to events without managing servers.
+            </p>
+            <p class="text-body">
+              The service is part of a broader cloud platform and is used to build event-driven and
+              scalable applications.
+            </p>
+            <p class="text-body">
+              The first version of the product was heavily based on competitor analysis.
+            </p>
+            <p class="text-body">
+              Over time, the team identified opportunities to significantly improve the developer
+              experience — while working strictly within an existing design system and predefined UI
+              components.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <h2 class="text-h2">Context &amp; Challenge</h2>
+            <p class="text-body">
+              Despite being functionally complete, the initial version had several UX issues:
+            </p>
+            <ul class="text-body">
+              <li>Core workflows (function creation, debugging, testing) were fragmented</li>
+              <li>Developers had to navigate multiple screens to complete simple tasks</li>
+              <li>Debugging and iteration cycles were slow and cognitively demanding</li>
+              <li>The mental model of how functions work in the platform was unclear</li>
+            </ul>
+            <p class="text-body">
+              These issues increased time-to-first-success and made the product harder to adopt.
+            </p>
+            <p class="text-body"><strong>Constraints</strong></p>
+            <ul class="text-body">
+              <li>No changes to the visual language or design system components</li>
+              <li>Limited ability to introduce new UI patterns</li>
+              <li>Need to stay compatible with existing backend logic</li>
+            </ul>
+            <p class="text-body">
+              These constraints required focusing purely on workflow clarity and interaction design,
+              rather than UI polish.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <h2 class="text-h2">My Role</h2>
+            <p class="text-body"><strong>Product Designer</strong></p>
+            <ul class="text-body">
+              <li>UX audit of the existing solution</li>
+              <li>Identifying usability and workflow issues</li>
+              <li>Redesigning core user flows</li>
+              <li>Planning and running usability testing</li>
+              <li>Synthesizing insights and presenting results to stakeholders</li>
+            </ul>
+          </section>
+
+          <section class="case-section">
+            <h2 class="text-h2">Design approach</h2>
+            <p class="text-body">
+              I started with a UX audit of the existing solution to identify friction points and
+              unnecessary steps.
+            </p>
+            <p class="text-body">
+              The main design goal was to reduce cognitive load and number of actions required to
+              reach a successful outcome.
+            </p>
+            <p class="text-body"><strong>Key principles:</strong></p>
+            <ul class="text-body">
+              <li>Fewer screens, clearer progression</li>
+              <li>Stronger alignment with developers’ mental models</li>
+              <li>Faster feedback during debugging and testing</li>
+            </ul>
+          </section>
+
+          <section class="case-section">
+            <h2 class="text-h2">Key design decisions</h2>
+
+            <h3 class="text-body-2">Simplified core workflows</h3>
+            <p class="text-body">
+              I restructured the main user flows to reduce the number of steps required to:
+            </p>
+            <ul class="text-body">
+              <li>create a function</li>
+              <li>debug and test execution</li>
+            </ul>
+            <p class="text-body">
+              Even visually, the updated user flows became significantly shorter and easier to follow.
+            </p>
+
+            <img
+              class="case-image"
+              src="../img/Userflow.png"
+              alt="Simplified user flows"
+            />
+
+            <h3 class="text-body-2">Clearer debugging experience</h3>
+            <p class="text-body">
+              Debugging is one of the most critical and stressful moments for developers.
+            </p>
+            <p class="text-body">The redesigned flow prioritizes:</p>
+            <ul class="text-body">
+              <li>immediate visibility of execution results</li>
+              <li>faster access to logs and errors</li>
+              <li>fewer context switches between screens</li>
+            </ul>
+            <p class="text-body">
+              This allowed developers to iterate faster and stay focused on problem-solving.
+            </p>
+
+            <h3 class="text-body-2">Progressive disclosure</h3>
+            <p class="text-body">
+              Instead of exposing all configuration options at once, the interface reveals complexity
+              progressively — only when it becomes relevant to the user.
+            </p>
+            <p class="text-body">
+              This approach reduced noise for less experienced users while keeping advanced options
+              accessible.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <h2 class="text-h2">Usability testing</h2>
+
+            <img
+              class="case-image"
+              src="../img/Test.png"
+              alt="Usability testing"
+            />
+
+            <p class="text-body">
+              To validate the design decisions, I prepared a detailed usability testing guide.
+            </p>
+            <p class="text-body">
+              Each interaction point was linked to a specific hypothesis, with corresponding tasks
+              and questions.
+            </p>
+            <p class="text-body">
+              I conducted usability sessions, analyzed the results, and compiled a structured report
+              highlighting:
+            </p>
+            <ul class="text-body">
+              <li>confirmed hypotheses</li>
+              <li>unexpected user behavior</li>
+              <li>areas requiring further iteration</li>
+            </ul>
+            <p class="text-body">
+              The findings were presented to the team and used to refine the solution.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <h2 class="text-h2">Outcome</h2>
+
+            <ul class="text-body">
+              <li>Core workflows became shorter and more predictable</li>
+              <li>Debugging and iteration cycles required fewer steps</li>
+              <li>The overall experience aligned better with developers’ mental models</li>
+            </ul>
+          </section>
+        </article>
+      </main>
+
+      <footer class="case-footer">
+        <div class="bar__inner">
+          <a class="ds-link ds-link--default" href="../cv/">CV</a>
+          <a class="ds-link ds-link--default" href="../postgresql/">PostgreSQL</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Managed PostgreSQL case study by Nastya Shendrik — designing a customer-facing managed PostgreSQL cloud service on cloud.ru."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nastya Shendrik" />
+    <meta property="og:url" content="https://shendrik.pro/postgresql/" />
+    <meta property="og:title" content="Managed PostgreSQL | Nastya Shendrik" />
+    <meta
+      property="og:description"
+      content="Managed PostgreSQL case study by Nastya Shendrik — designing a customer-facing managed PostgreSQL cloud service on cloud.ru."
+    />
+    <meta property="og:image" content="https://shendrik.pro/img/Cover.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Managed PostgreSQL | Nastya Shendrik" />
+    <meta
+      name="twitter:description"
+      content="Managed PostgreSQL case study by Nastya Shendrik — designing a customer-facing managed PostgreSQL cloud service on cloud.ru."
+    />
+    <meta name="twitter:image" content="https://shendrik.pro/img/Cover.png" />
+    <title>Managed PostgreSQL | Nastya Shendrik</title>
+    <link rel="icon" href="../img/fav.png" type="image/png" />
+    <link rel="stylesheet" href="../tokens.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="case-shell">
+      <header class="case-header">
+        <div class="bar__inner">
+          <a class="ds-link ds-link--default" href="../">Nastya Shendrik</a>
+          <a class="ds-link ds-link--default" href="https://t.me/nastyashendrik?text=Hi!">Say Hi</a>
+        </div>
+      </header>
+
+      <main class="case-main">
+        <article class="case-content">
+          <svg
+            class="case-title-image case-brand-svg"
+            width="237"
+            height="92"
+            viewBox="0 0 237 92"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="cloud.ru"
+          >
+            <path
+              d="M182.559 60.5947C185.176 60.5947 186.841 59.01 186.841 56.3206C186.841 53.6311 185.176 52.0464 182.559 52.0464C179.943 52.0464 178.278 53.6311 178.278 56.3206C178.278 59.01 179.943 60.5947 182.559 60.5947ZM205.156 34.0854H208.011V39.8483H203.729C199.923 39.8483 198.639 41.625 198.639 44.5065V60.0184H192.645V34.0373H198.354V38.8396C199.495 35.526 201.779 34.0854 205.156 34.0854ZM94.7395 47.0999C94.7395 52.6227 96.7374 55.264 101.97 55.264C107.204 55.264 109.201 52.6227 109.201 47.0999V46.9558C109.201 41.433 107.204 38.8396 101.97 38.8396C96.7374 38.8396 94.7395 41.433 94.7395 46.9558V47.0999ZM101.97 60.5947C93.7879 60.5947 88.65 55.456 88.65 47.0518C88.65 38.6476 93.7879 33.5091 101.97 33.5091C110.153 33.5091 115.291 38.6476 115.291 47.0518C115.291 55.456 110.153 60.5947 101.97 60.5947ZM78.8501 60.0184H84.8444V24.0002H78.8501V60.0184ZM172.521 24.0002V60.0184H166.813V56.1764C165.195 58.7699 162.721 60.5947 158.487 60.5947C150.4 60.5947 146.356 54.9278 146.356 47.4361C146.356 39.2239 150.4 33.557 158.487 33.557C162.008 33.557 165.385 35.2858 166.527 37.591V24.0002H172.521ZM159.582 55.264C164.719 55.264 166.718 52.6227 166.718 47.0999V46.9558C166.718 41.433 164.719 38.8877 159.582 38.8877C154.444 38.8877 152.445 41.433 152.445 46.9558V47.0999C152.445 52.6227 154.444 55.264 159.582 55.264ZM217.002 49.5011C217.002 53.3431 218.905 55.264 222.711 55.264C226.517 55.264 228.42 53.3431 228.42 49.5011V34.0854H234.414V60.0184H228.8V56.1764C227.23 58.914 224.661 60.5947 220.38 60.5947C214.291 60.5947 211.008 57.233 211.008 50.5095V34.0854H217.002V49.5011ZM125.043 49.5011C125.043 53.3431 126.946 55.264 130.752 55.264C134.558 55.264 136.461 53.3431 136.461 49.5011V34.0854H142.455V60.0184H136.842V56.1764C135.272 58.914 132.703 60.5947 128.421 60.5947C122.332 60.5947 119.049 57.233 119.049 50.5095V34.0854H125.043V49.5011ZM65.1014 33.5091C56.5383 33.5091 51.9236 38.4074 51.9236 47.0518C51.9236 55.6961 56.5383 60.5947 64.8635 60.5947C70.3344 60.5947 74.7585 57.8093 76.5189 52.1424H70.8101C69.7158 54.0636 68.146 55.264 64.8635 55.264C59.9635 55.264 58.013 52.6227 58.013 47.0999V46.9558C58.013 41.433 59.9635 38.8396 65.1014 38.8396C68.146 38.8396 69.7158 39.8961 70.8101 41.721H76.5189C74.7585 36.2464 70.5722 33.5091 65.1014 33.5091Z"
+              fill="currentColor"
+            />
+            <path
+              d="M21.0834 48.5689H39.2866V60.2642L21.08 67.9964V48.5656L21.0834 48.5689ZM39.2866 45.861V34.1657L21.0834 26.4302V45.8509L39.2866 45.861ZM0 34.1657V60.2676L18.2065 67.9997V26.4302L0 34.1657Z"
+              fill="#26D07C"
+            />
+          </svg>
+          <h1 class="text-h1">Managed PostgreSQL</h1>
+          <p class="text-body">
+            Designing a customer-facing managed PostgreSQL cloud service
+          </p>
+
+          <img
+            class="case-image"
+            src="../img/Pangolin.png"
+            alt="Managed PostgreSQL service overview"
+          />
+
+          <section class="case-section">
+            <h2 class="text-h2">Overview</h2>
+            <p class="text-body">
+              Platform V Pangolin &amp; Managed PostgreSQL is a customer-facing cloud service offered
+              on the
+              <a class="ds-link" href="https://cloud.ru/">cloud.ru</a>
+              platform.
+            </p>
+            <p class="text-body">
+              It enables cloud customers to create, configure, and manage PostgreSQL clusters
+              without deep involvement in infrastructure operations.
+            </p>
+            <p class="text-body">
+              The service is designed for running PostgreSQL in production environments, focusing
+              on reliability, safety, and predictable behavior.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <h2 class="text-h2">Context &amp; Challenge</h2>
+            <p class="text-body">
+              Cloud.ru was launching a new managed PostgreSQL service for external cloud customers
+              as part of its public cloud platform.
+            </p>
+            <p class="text-body">This product directly impacts:</p>
+            <ul class="text-body">
+              <li>developer experience</li>
+              <li>trust in the cloud platform</li>
+              <li>customers’ willingness to run production workloads in the cloud</li>
+            </ul>
+            <p class="text-body"><strong>Key challenges:</strong></p>
+            <ul class="text-body">
+              <li>the service was designed from scratch</li>
+              <li>the domain is technically complex (databases, HA, backups, recovery)</li>
+              <li>multiple user roles with different goals and expertise</li>
+              <li>strict constraints of an existing platform-wide design system</li>
+              <li>high cost of UX errors (data loss, downtime, misconfiguration)</li>
+            </ul>
+            <p class="text-body">
+              This was a customer-facing cloud product, not an internal tool — clarity, safety, and
+              confidence were critical.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <h2 class="text-h2">My Role</h2>
+            <p class="text-body">
+              I worked as a Product Designer, leading discovery and design for the service.
+            </p>
+            <p class="text-body">My responsibilities included:</p>
+            <ul class="text-body">
+              <li>gathering and structuring product and technical requirements</li>
+              <li>planning and conducting research</li>
+              <li>running user interviews and qualitative analysis</li>
+              <li>defining and validating Job Stories</li>
+              <li>competitive analysis of managed database services</li>
+              <li>designing end-to-end user flows</li>
+              <li>participating in design reviews and alignment with engineering teams</li>
+            </ul>
+          </section>
+
+          <section class="case-section">
+            <h2 class="text-h2">Users &amp; Segmentation</h2>
+            <p class="text-body">
+              Initially, users were described as a generic “DB administrator,” which risked
+              oversimplifying real usage scenarios.
+            </p>
+            <p class="text-body">
+              Through stakeholder interviews and early research, I defined key user segments within
+              the cloud platform:
+            </p>
+            <ul class="text-body">
+              <li>Developers — want to quickly provision a database and start building</li>
+              <li>DevOps / SRE — responsible for reliability, configuration, and incident response</li>
+              <li>Tech Leads / Architects — make decisions about production readiness and cloud adoption</li>
+            </ul>
+            <p class="text-body">
+              This segmentation became the foundation for discovery and design decisions.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <h2 class="text-h2">Hypotheses &amp; Job Stories</h2>
+            <p class="text-body">
+              Based on the user segments, I formulated initial hypotheses and Job Stories, later
+              validated through interviews.
+            </p>
+            <p class="text-body"><strong>Example:</strong></p>
+            <p class="text-body">
+              When I launch a PostgreSQL cluster in the cloud,<br />
+              I want to be confident that the default configuration is production-ready,<br />
+              so I don’t need to deeply understand infrastructure details.
+            </p>
+            <p class="text-body">
+              Job Stories were used as a decision-making tool, not just a documentation artifact.
+            </p>
+          </section>
+
+          <img
+            class="case-image"
+            src="../img/UserstoryPostgreSQL.png"
+            alt="Job story workshop artifact"
+          />
+
+          <section class="case-section">
+            <h2 class="text-h2">User Interviews &amp; Analysis</h2>
+            <p class="text-body">I:</p>
+            <ul class="text-body">
+              <li>prepared interview guides tailored to each user segment</li>
+              <li>conducted user interviews with cloud customers</li>
+              <li>fully transcribed and tagged interview data</li>
+              <li>grouped insights by themes and scenarios</li>
+            </ul>
+            <p class="text-body">
+              This allowed us to move from assumptions to validated user needs and priorities.
+            </p>
+          </section>
+
+          <img
+            class="case-image"
+            src="../img/Analize.png"
+            alt="Interview analysis and tagging"
+          />
+
+          <section class="case-section">
+            <h2 class="text-h2">Research Readout &amp; Team Workshop</h2>
+            <p class="text-body">
+              I presented research findings to the product and engineering teams and facilitated a
+              workshop where we:
+            </p>
+            <ul class="text-body">
+              <li>aligned on key user insights</li>
+              <li>discussed differences between user roles</li>
+              <li>prioritized Job Stories</li>
+              <li>connected user needs to the product backlog</li>
+            </ul>
+            <p class="text-body">
+              This helped shift the team’s focus from purely technical requirements to real customer
+              workflows.
+            </p>
+          </section>
+
+          <img
+            class="case-image"
+            src="../img/PostrgresWorkshops.png"
+            alt="Team workshop"
+          />
+
+          <section class="case-section">
+            <h2 class="text-h2">Competitive Analysis</h2>
+            <p class="text-body">I conducted a detailed analysis of:</p>
+            <ul class="text-body">
+              <li>Huawei Cloud’s managed PostgreSQL service</li>
+              <li>UX approaches used by other cloud providers</li>
+            </ul>
+            <p class="text-body">The focus was on:</p>
+            <ul class="text-body">
+              <li>end-to-end user scenarios</li>
+              <li>number of steps and decision points</li>
+              <li>clarity of system states</li>
+              <li>prevention of critical user errors</li>
+            </ul>
+            <p class="text-body">
+              The goal was not visual inspiration, but understanding how users reason about their
+              databases.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <h2 class="text-h2">User Flows &amp; Scenarios</h2>
+            <p class="text-body">
+              Based on research insights, technical constraints, and platform requirements, I
+              designed key end-to-end user flows, including:
+            </p>
+            <ul class="text-body">
+              <li>PostgreSQL cluster creation</li>
+              <li>cluster state management</li>
+              <li>backup and recovery scenarios</li>
+              <li>monitoring and diagnostics</li>
+            </ul>
+            <p class="text-body">All flows were reviewed and aligned with:</p>
+            <ul class="text-body">
+              <li>product stakeholders</li>
+              <li>backend engineers</li>
+              <li>platform constraints</li>
+            </ul>
+          </section>
+
+          <img
+            class="case-image"
+            src="../img/PostrgresSQLFlows.png"
+            alt="User flows for Managed PostgreSQL"
+          />
+
+          <section class="case-section">
+            <h2 class="text-h2">Final Solution</h2>
+            <p class="text-body">
+              I worked within the existing cloud.ru design system, focusing on:
+            </p>
+            <ul class="text-body">
+              <li>clear and predictable user flows</li>
+              <li>transparent system states</li>
+              <li>reduced cognitive load</li>
+              <li>prevention of critical misconfigurations</li>
+            </ul>
+            <p class="text-body">
+              The primary design contribution was scenario clarity and decision safety, rather than
+              visual customization.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <h2 class="text-h2">Outcome</h2>
+            <ul class="text-body">
+              <li>the managed PostgreSQL service was launched and became available to cloud.ru customers</li>
+              <li>customers gained access to a production-ready managed database as part of the cloud ecosystem</li>
+              <li>the product was built around validated user workflows rather than abstract infrastructure assumptions</li>
+            </ul>
+            <p class="text-body">
+              For a cloud service, this directly impacts adoption, trust, and long-term usage.
+            </p>
+          </section>
+
+          <img
+            class="case-image"
+            src="../img/Site.png"
+            alt="Managed PostgreSQL in the cloud console"
+          />
+
+          <section class="case-section">
+            <h2 class="text-h2">Key Learnings</h2>
+            <ul class="text-body">
+              <li>in cloud products, UX is closely tied to risk management</li>
+              <li>design systems help scale decisions and consistency, not limit impact</li>
+              <li>Job Stories are an effective bridge between product, design, and engineering in complex domains</li>
+            </ul>
+          </section>
+        </article>
+      </main>
+
+      <footer class="case-footer">
+        <div class="bar__inner">
+          <a class="ds-link ds-link--default" href="../cv/">CV</a>
+          <a class="ds-link ds-link--default" href="../ml-platform/">ML Platform</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../main.js"></script>
+  </body>
+</html>

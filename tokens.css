@@ -1,0 +1,270 @@
+html {
+  color-scheme: light;
+}
+
+:root {
+  /* Colors (Figma variables) */
+  --color-fon: #fffcf3;
+  --color-fon-2: #f5f0e2;
+  --color-fon-3: #f4e8d1;
+  --color-text: #2b2a28;
+  --color-text-2: #383737;
+  --color-accent: #ee3b66;
+  --color-accent-2: #b53d68;
+
+  /* Typography (Figma variables) */
+  --font-family-base: "Proxima Nova", "Segoe UI", Arial, sans-serif;
+  --font-size-h1: 44px;
+  --font-size-h2: 32px;
+  --font-size-h3: 24px;
+  --font-size-body: 18px;
+  --font-size-body-2: 18px;
+
+  --font-weight-h1: 800;
+  --font-weight-h2: 700;
+  --font-weight-h3: 400;
+  --font-weight-body: 400;
+  --font-weight-body-2: 700;
+
+  --line-height-h1: 1.1;
+  --line-height-h2: 1.2;
+  --line-height-h3: 1.2;
+  --line-height-body: 1.2;
+  --line-height-body-2: 1.2;
+
+  --letter-spacing-h1: -0.03em;
+  --letter-spacing-h2: -0.02em;
+  --letter-spacing-h3: 0;
+  --letter-spacing-body: 0;
+  --letter-spacing-body-2: 0;
+
+  /* Radius/spacing/layout tokens */
+  --radius-sm: 8px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  --container-width-lg: 1200px;
+  --header-height: 56px;
+  --card-width: 240px;
+  --card-height: 150px;
+  --button-height: 38px;
+
+  /* Semantic tokens for site */
+  --page-bg: var(--color-fon);
+  --surface-1: var(--color-fon-2);
+  --surface-2: var(--color-fon-3);
+  --text-primary: var(--color-text);
+  --text-secondary: var(--color-text-2);
+  --border-subtle: rgba(43, 42, 40, 0.12);
+  --focus-ring: rgba(238, 59, 102, 0.4);
+  --shadow-soft: 0 10px 30px rgba(43, 42, 40, 0.08);
+  --backdrop-blur-footer: 28.1px;
+}
+
+/* Тёмная тема по системе / настройкам браузера (надёжно в Chrome и др.) */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  :root {
+    --color-fon: #161514;
+    --color-fon-2: #232120;
+    --color-fon-3: #2f2c2b;
+    --color-text: #f4f0e5;
+    --color-text-2: #cac4b7;
+    --color-accent: #ff5d84;
+    --color-accent-2: #ff7c9c;
+
+    --page-bg: var(--color-fon);
+    --surface-1: var(--color-fon-2);
+    --surface-2: var(--color-fon-3);
+    --text-primary: var(--color-text);
+    --text-secondary: var(--color-text-2);
+    --border-subtle: rgba(255, 252, 243, 0.16);
+    --focus-ring: rgba(255, 93, 132, 0.4);
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* Base typography */
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-body);
+  color: var(--text-primary);
+  background: var(--page-bg);
+}
+
+h1,
+.text-h1 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-h1);
+  line-height: var(--line-height-h1);
+  letter-spacing: var(--letter-spacing-h1);
+  margin: 0;
+}
+
+h2,
+.text-h2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-h2);
+  line-height: var(--line-height-h2);
+  letter-spacing: var(--letter-spacing-h2);
+  margin: 0;
+}
+
+h3,
+.text-h3 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-h3);
+  line-height: var(--line-height-h3);
+  letter-spacing: var(--letter-spacing-h3);
+  margin: 0;
+}
+
+.text-body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-body);
+}
+
+.text-body-2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-2);
+  font-weight: var(--font-weight-body-2);
+  line-height: var(--line-height-body-2);
+  letter-spacing: var(--letter-spacing-body-2);
+}
+
+/* Components */
+.ds-header {
+  width: var(--container-width-lg);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.ds-card {
+  width: var(--card-width);
+  height: var(--card-height);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.ds-card--default {
+  background: var(--surface-1);
+}
+
+.ds-card--hover {
+  background: var(--surface-2);
+}
+
+.ds-button {
+  min-width: 240px;
+  height: var(--button-height);
+  border: 0;
+  border-radius: var(--radius-sm);
+  padding: 0 var(--space-6);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.ds-button--default {
+  background: var(--surface-1);
+  color: var(--text-primary);
+}
+
+.ds-button--hover,
+.ds-button:hover {
+  background: var(--surface-2);
+  color: var(--text-primary);
+}
+
+.ds-footer-item {
+  width: 1204px;
+  height: var(--header-height);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+  backdrop-filter: blur(var(--backdrop-blur-footer));
+}
+
+.ds-footer-item--main {
+  justify-content: center;
+  padding: var(--space-4) 0;
+}
+
+.ds-footer-item--alt {
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+}
+
+/* Links: default = primary text color; hover/focus = accent. Never use a “hover”
+   modifier class for the default state — hover color applies only via :hover / :focus-visible. */
+.ds-link {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.ds-link--default {
+  color: var(--text-primary);
+}
+
+.ds-link:hover,
+.ds-link:focus-visible {
+  color: var(--color-accent);
+}
+
+.ds-link:active,
+.ds-link.ds-link--pressed {
+  color: var(--text-secondary);
+}
+
+/* Inline hero logos: wordmark uses currentColor so it follows the theme */
+.case-title-image.case-brand-svg {
+  color: var(--text-primary);
+}
